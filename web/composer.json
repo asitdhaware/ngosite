@@ -1,0 +1,17 @@
+{
+    "name": "pruthviraj/ngo",
+    "description": "PHP conn",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "sahil hatankar",
+            "email": "sahilhatankar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "4.18"
+        "PHP": ">= 7.2.0"
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+       <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+       <script type="text/javascript" >
+
+        // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBW1CfEngjzTGTVFwBiwIEuTzl-wpMmimk",
+    authDomain: "ngocc-bd7a3.firebaseapp.com",
+    databaseURL: "https://ngocc-bd7a3.firebaseio.com",
+    projectId: "ngocc-bd7a3",
+    storageBucket: "ngocc-bd7a3.appspot.com",
+    messagingSenderId: "1019720918087"
+  };
+  firebase.initializeApp(config);
+
+
+
+
+
+function get2data(){
+
+
+                       
+var phone = document.getElementById("user").value;
+var password = document.getElementById("user2").value;
+ var ref = firebase.database().ref().child('Ngo').child('personinfo');
+
+ref.on("value", function(snapshot) {
+   
+   var childdata = snapshot.val();
+   console.log(childdata);
+   //alert(childdata);
+   var key = Object.keys(childdata);
+  console.log(key);
+   /*for(var i=0;i<key.legth;i++){
+    var k = key[i];
+    var name=[k].name;
+    var type=Ngo[k].type;
+    var state=Ngo[k].state;
+    console.log(name,type,state);
+       }*/
+   if(childdata["type"]==ftype&&childdata["state"]==fstate){
+                       }
+
+}, function (error) {
+   console.log("Error: " + error.code);
+});}
+
+
+</script>
+</head>
+<body id="body">
+
+        <section id="sec1">
+            <div class="container">
+                <img src="donation.png"id="image1">
+                <h3 id="head1">Log In</h3>
+                <form action="login.php" method="POST">               <!-- Username: -->
+                <i class="fas fa-user"id="usericon"></i><input type="tel" name="user" placeholder="Phone" class="form-control" id="user" required>
+                <i class="fas fa-lock" id="usericon2"></i><input type="password" name="pass" placeholder="Password" class="form-control" id="user2" required>
+                <input type="checkbox" id="check"><h6 id="head2">Remember Me</h6>
+                <a href="#"><h6 id="head3">Forgot password</h6></a>
+
+                <button type="submit" onclick="get2data()" class="btn btn-lg btn-outline-light" id="but">Login</button>
+                  </form>
+               <a href="signup.html"> <button type="submit" class="btn btn-lg btn-outline-light" id="but2">Signup</button>  </a>
+                
+            </div>
+        </section>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+.navbar-nav{
+    margin-left:70%;
+    font-family: 'Poppins', sans-serif;
+    font-size:150%;
+}
+.navbar-brand{
+    margin-left:5%;
+    font-family: 'Poppins', sans-serif;
+    font-size:150%;
+}
+#head1{
+    font-family: 'Poppins', sans-serif;
+    margin-top:20%;
+    margin-left:5%;
+}
+#sec3{
+    margin-top:5%;
+    /* margin-bottom:20%; */
+}
+#cause{
+    width:60%;
+    font-family: 'Poppins', sans-serif;
+    /* margin-left:30%; */
+}
+#state{
+    width:70%;
+    font-family: 'Poppins', sans-serif;
+    /* margin-left:30%; */
+}
+.image1{
+    height:15px;
+    width:15px;
+    margin-left:5%;
+}
+#head2{
+    font-family: 'Poppins', sans-serif;
+    margin-left:20%;
+    color:#738598;
+}
+#sec4{
+    margin-top:10%;
+    margin-bottom: 10%;
+}
+#name{
+    width:40%;
+    margin-left:50%;
+    margin-top:3%;
+    text-align:center;
+}
+#mail{
+    width:40%;
+    margin-top:3%;
+    text-align:center;
+}
+#div1{
+    margin-left:44%;
+    margin-top:3%;
+}
+.navbar{
+    background-color: #a9c6de;
+}
